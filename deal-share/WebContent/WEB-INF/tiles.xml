@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="base.definition" template="/WEB-INF/jsp/layout.jsp">
+        <put-attribute name="title" value="DealShare" />
+        <put-attribute name="logo" value="/WEB-INF/jsp/logo.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp" />
+        <put-attribute name="sidenav" value="/WEB-INF/jsp/sidenav.jsp" />
+        <put-attribute name="pagination" value="" />
+        <put-attribute name="searchresult" value="" />
+        <put-attribute name="commercial" value="/WEB-INF/jsp/commercial.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+    </definition>
+    
+    <definition name="base2.definition" template="/WEB-INF/jsp/loginlayout.jsp">
+    	<put-attribute name="title" value="DealShare" />
+        <put-attribute name="logo" value="/WEB-INF/jsp/logo.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp" />
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+    </definition>
+ 
+    <definition name="home" extends="base.definition">
+        <put-attribute name="title" value="Home" />
+        <put-attribute name="pagination" value="/WEB-INF/jsp/pagination.jsp" />
+        <put-attribute name="searchresult" value="/WEB-INF/jsp/home.jsp"/>
+    </definition>
+    
+    <definition name="login" extends="base2.definition">
+    	<put-attribute name="body" value="/WEB-INF/jsp/login.jsp"/>
+    </definition>
+    
+    <definition name="search" extends="base.definition">
+    	<put-attribute name="sidenav" value="/WEB-INF/jsp/sidenav.jsp" />
+        <put-attribute name="pagination" value="/WEB-INF/jsp/pagination.jsp" />
+        <put-attribute name="searchresult" value="/WEB-INF/jsp/searchresult.jsp" />
+        <put-attribute name="commercial" value="/WEB-INF/jsp/commercial.jsp" />
+    </definition>
+    
+ 	<definition name="error" extends="base.definition">
+    	<put-attribute name="body" value="/WEB-INF/jsp/error.jsp"/>
+    </definition>
+ 	
+ 	<definition name="connect/twitterConnect" extends="base.definition">
+    	<put-attribute name="body" value="/WEB-INF/jsp/connect/error.jsp"/>
+    </definition>
+</tiles-definitions>

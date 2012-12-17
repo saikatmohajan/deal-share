@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 13, 2012 4:29:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.springframework.social.security.model.Socialuser" table="socialuser" catalog="social">
+        <id name="userId" type="string">
+            <column name="userId" />
+            <generator class="assigned" />
+        </id>
+        <property name="providerId" type="string">
+            <column name="providerId" length="45" not-null="true" />
+        </property>
+        <property name="providerUserId" type="string">
+            <column name="providerUserId" length="225" />
+        </property>
+        <property name="rank" type="int">
+            <column name="rank" not-null="true" />
+        </property>
+        <property name="displayName" type="string">
+            <column name="displayName" length="45" />
+        </property>
+        <property name="profileUrl" type="string">
+            <column name="profileUrl" length="225" />
+        </property>
+        <property name="imageUrl" type="string">
+            <column name="imageUrl" length="225" />
+        </property>
+        <property name="accessToken" type="string">
+            <column name="accessToken" not-null="true" />
+        </property>
+        <property name="secret" type="string">
+            <column name="secret" length="225" />
+        </property>
+        <property name="refreshToken" type="string">
+            <column name="refreshToken" length="225" />
+        </property>
+        <property name="expireTime" type="string">
+            <column name="expireTime" length="16777215" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="createDate" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
